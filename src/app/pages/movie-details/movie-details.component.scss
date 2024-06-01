@@ -1,0 +1,33 @@
+$color_1: #ffffff;
+$background-color_1: #E50914;
+
+p.overview {
+  max-width: 85%;
+  font-size: 21px;
+}
+
+.poster-image {
+  margin-top: 6rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+h1 {
+  color: $color_1;
+  font-weight: bold;
+}
+p {
+  color: $color_1;
+}
+a {
+  &:hover {
+    background-color: $background-color_1;
+  }
+}
+
+@media (max-width: 599px) {
+  p.overview {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg fixed-top" [ngStyle]="navBackground">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home">HFLIXX</a>
+    @if (loggedIn) {
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    }
+    @if (loggedIn) {
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active me-2" aria-current="page" routerLink="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-2 search" routerLink="search">Search</a>
+          </li>
+          <li class="nav-item">
+            @if (loggedIn) {
+              <a (click)="onClick()" class="nav-link active me-2">Logout</a>
+            }
+          </li>
+
+        </ul>
+      </div>
+    }
+  </div>
+</nav>
